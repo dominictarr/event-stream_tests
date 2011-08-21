@@ -1,0 +1,55 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+info using npm@1.0.13
+info using node@v0.4.10
+verbose config file /home/dominic/.npmrc
+verbose config file /usr/local/etc/npmrc
+silly testEngine { name: 'event-stream_tests',
+silly testEngine   version: '0.0.0',
+silly testEngine   description: '',
+silly testEngine   homepage: 'http://github.com/dominictarr/event-stream_tests',
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/dominictarr/event-stream_tests.git' },
+silly testEngine   dependencies: { 'it-is': 1 },
+silly testEngine   devDependencies: {},
+silly testEngine   author: 
+silly testEngine    { name: 'Dominic Tarr',
+silly testEngine      email: 'dominic.tarr@gmail.com',
+silly testEngine      url: 'http://bit.ly/dominictarr' },
+silly testEngine   scripts: { test: 'meta-test test/*.js' },
+silly testEngine   _npmJsonOpts: 
+silly testEngine    { dev: true,
+silly testEngine      file: '/home/dominic/source/dev/event-stream_tests/package.json',
+silly testEngine      wscript: false,
+silly testEngine      contributors: false,
+silly testEngine      serverjs: false },
+silly testEngine   _id: 'event-stream_tests@0.0.0',
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.13',
+silly testEngine   _nodeVersion: 'v0.4.10',
+silly testEngine   _defaultsLoaded: true }
+verbose caching /home/dominic/source/dev/event-stream_tests/package.json
+verbose loadDefaults event-stream_tests@0.0.0
+verbose where, deps [ '/home/dominic/source/dev/event-stream_tests',
+verbose where, deps   [ 'it-is' ] ]
+ERR! TypeError: Object 1 has no method 'match'
+ERR!     at Object.urlParse [as parse] (url.js:112:42)
+ERR!     at /usr/local/lib/node_modules/npm/lib/install.js:197:20
+ERR!     at Array.map (native)
+ERR!     at /usr/local/lib/node_modules/npm/lib/install.js:195:29
+ERR!     at /usr/local/lib/node_modules/npm/lib/utils/load-package-defaults.js:27:23
+ERR!     at cb (/usr/local/lib/node_modules/npm/lib/utils/async-map.js:51:11)
+ERR!     at /usr/local/lib/node_modules/npm/lib/utils/load-package-defaults.js:40:31
+ERR!     at /usr/local/lib/node_modules/npm/lib/utils/async-map.js:57:35
+ERR!     at Array.forEach (native)
+ERR!     at /usr/local/lib/node_modules/npm/lib/utils/async-map.js:57:11
+ERR! Report this *entire* log at:
+ERR!     <http://github.com/isaacs/npm/issues>
+ERR! or email it to:
+ERR!     <npm-@googlegroups.com>
+ERR! 
+ERR! System Linux 2.6.35-30-generic-pae
+ERR! command "node" "/usr/local/bin/npm" "install"
+verbose exit [ 1, true ]
