@@ -12,6 +12,7 @@ function writeArray(array, stream) {
 }
 
 function readStream(stream, done) {
+
   var array = [] 
   stream.on('data', function (data) {
     array.push(data)
@@ -75,3 +76,21 @@ exports['pipe two maps together'] = function (test) {
 // plumber (evStr1, evStr2, evStr3, evStr4, evStr5)
 //
 // will return a single stream that write goes to the first 
+
+exports ['map will not call end until the callback'] = function (test) {
+
+  var ticker = es.map(function (data, cb) {
+    process.nextTick(function () {
+      cb(null, data * 2)
+    })
+  })
+  ticker.write('x')
+
+  ticker.end()
+  ticker.end()
+  ticker.end()
+
+  ticker.on('end', function () {
+    test.done()
+  })
+}
