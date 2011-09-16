@@ -22,22 +22,22 @@ exports ['read an array'] = function (test) {
 
   var readThis = d.map(3, 6, 100, d.id) //array of multiples of 3 < 100
 
-  var reader = es.read(readThis)
-  
-  readStream(reader, function (err, data) {
-    if(err) throw err
-    it(data).deepEqual(readThis)
-    test.done() 
+  var reader = es.readArray(readThis)
+
+  var writer = es.writeArray(function (err, array){
+    if(err) throw err //unpossible
+    it(array).deepEqual(readThis)
+    test.done()     
   })
 
-  reader.open()
+  reader.pipe(writer)
 }
 
 exports ['read an array and pause it.'] = function (test) {
 
   var readThis = d.map(3, 6, 100, d.id) //array of multiples of 3 < 100
 
-  var reader = es.read(readThis)
+  var reader = es.readArray(readThis)
   
   readStream(reader, 10, function (err, data) {
     if(err) throw err
@@ -48,11 +48,11 @@ exports ['read an array and pause it.'] = function (test) {
     })
     reader.resume()
   })
-  reader.open()
+
 }
 
 exports ['reader is readable, but not writeable'] = function (test) {
-  var reader = es.read([1])
+  var reader = es.readArray([1])
   it(reader).has({
     readable: true,
     writable: false
@@ -65,7 +65,7 @@ exports ['reader is readable, but not writeable'] = function (test) {
 exports ['read one item per tick'] = function (test) {
   var readThis = d.map(3, 6, 100, d.id) //array of multiples of 3 < 100
   var drains = 0
-  var reader = es.read(readThis)
+  var reader = es.readArray(readThis)
   var tickMapper = es.map(function (data,callback) {
     process.nextTick(function () {
       callback(null, data)
@@ -84,5 +84,5 @@ exports ['read one item per tick'] = function (test) {
   tickMapper.on('drain', function () {
     drains ++
   })
-  reader.open()
+
 }
