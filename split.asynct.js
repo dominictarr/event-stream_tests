@@ -6,7 +6,7 @@ var es = require('event-stream')
   , Stream = require('stream').Stream
 
 exports ['pipeable'] = function (test) {
-  var readme = join(__dirname, 'readme.markdown')
+  var readme = join(__filename)
     , expected = fs.readFileSync(readme, 'utf-8').split('\n')
     , cs = es.split()
     , actual = []
@@ -32,3 +32,4 @@ exports ['pipeable'] = function (test) {
   cs.pipe(a)  
   
 }
+

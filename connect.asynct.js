@@ -4,7 +4,7 @@ var es = require('event-stream')
 
 function makeExamplePipe() {
 
-  return es.pipe(
+  return es.connect(
     es.map(function (data, callback) {
       callback(null, data * 2)
     }),
@@ -35,7 +35,7 @@ exports['read array then map'] = function (test) {
     , first = es.readArray(readThis)
     , read = []
     , pipe =
-  es.pipe(
+  es.connect(
     first,
     es.map(function (data, callback) {
       callback(null, {data: data})      
@@ -50,5 +50,33 @@ exports['read array then map'] = function (test) {
       test.done()  
     })
   )
+}
 
+exports ['connect returns a stream'] = function (test) {
+
+  var rw = 
+    es.connect(
+      es.map(function (data, callback) {
+        callback(null, data * 2)      
+      }),
+      es.map(function (data, callback) {
+        callback(null, data * 5)      
+      })
+    )
+
+  it(rw).has({readable: true, writable: true})
+
+  var array = [190, 24, 6, 7, 40, 57, 4, 6]
+    , _array = []
+    , c = 
+  es.connect(
+    es.readArray(array),
+    rw,
+    es.log('after rw:'),
+    es.writeArray(function (err, _array) {
+      it(_array).deepEqual(array.map(function (e) { return e * 10 }))
+      test.done()
+    })
+    )
+  
 }

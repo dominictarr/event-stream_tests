@@ -2,6 +2,8 @@
 var es = require('event-stream')
   , it = require('it-is')
 
+//REFACTOR THIS TEST TO USE es.readArray and es.writeArray
+
 function writeArray(array, stream) {
 
   array.forEach( function (j) {
@@ -33,6 +35,13 @@ exports ['simple map applied to a stream'] = function (test) {
     cb(null, data * 2)
   })
   
+  //a map is only a middle man, so it is both readable and writable
+  
+  it(doubler).has({
+    readable: true,
+    writable: true,   
+  })
+
   readStream(doubler, function (err, output) {
     it(output).deepEqual(input.map(function (j) {
       return j * 2
@@ -93,4 +102,39 @@ exports ['map will not call end until the callback'] = function (test) {
   ticker.on('end', function () {
     test.done()
   })
+}
+
+
+exports ['emit error thrown'] = function (test) {
+
+  var err = new Error('INTENSIONAL ERROR')
+    , mapper = 
+  es.map(function () {
+    throw err
+  })
+
+  mapper.on('error', function (_err) {
+    it(_err).equal(err)  
+    test.done()
+  })
+
+  mapper.write('hello')
+
+}
+
+exports ['emit error calledback'] = function (test) {
+
+  var err = new Error('INTENSIONAL ERROR')
+    , mapper = 
+  es.map(function (data, callback) {
+    callback(err)
+  })
+
+  mapper.on('error', function (_err) {
+    it(_err).equal(err)  
+    test.done()
+  })
+
+  mapper.write('hello')
+
 }
