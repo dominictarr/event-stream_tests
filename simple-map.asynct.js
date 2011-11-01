@@ -1,6 +1,7 @@
 
 var es = require('event-stream')
   , it = require('it-is')
+  , u = require('ubelt')
 
 //REFACTOR THIS TEST TO USE es.readArray and es.writeArray
 
@@ -138,3 +139,48 @@ exports ['emit error calledback'] = function (test) {
   mapper.write('hello')
 
 }
+
+exports ['do not emit drain if not paused'] = function (test) {
+
+  var map = es.map(function (data, callback) {
+    u.delay(callback)(null, 1)
+    return true
+  })
+  map.on('drain', function () {
+    it(false).ok('should not emit drain unless the stream is paused')
+  })
+  it(map.write('hello')).equal(true)
+  it(map.write('hello')).equal(true)
+  it(map.write('hello')).equal(true)
+  setTimeout(function () {map.end()},10)
+  map.on('end', test.done)
+
+}
+
+exports ['emits drain if paused, when all '] = function (test) {
+  var active = 0
+  var drained = false
+  var map = es.map(function (data, callback) {
+    active ++
+    u.delay(function () {
+      active --
+      callback(null, 1)
+    })()
+    return false
+  })
+  map.on('drain', function () {
+    drained = true
+    it(active).equal(0, 'should emit drain when all maps are done')
+  })
+  it(map.write('hello')).equal(false)
+  it(map.write('hello')).equal(false)
+  it(map.write('hello')).equal(false)
+  setTimeout(function () {map.end()},10)
+  map.on('end', function () {
+    it(drained).ok('shoud have emitted drain before end')
+    test.done()
+    
+  })
+
+}
+
