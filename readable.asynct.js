@@ -1,11 +1,11 @@
 
 var es = require('event-stream')
   , it = require('it-is').style('colour')
-  , d = require('d-utils')
+  , u = require('ubelt')
 
 exports ['read an array'] = function (test) {
 
-  var readThis = d.map(3, 6, 100, d.id) //array of multiples of 3 < 100
+  var readThis = u.map(3, 6, 100, u.id) //array of multiples of 3 < 100
 
   var reader = 
     es.readable(function (i, callback) {
@@ -23,9 +23,30 @@ exports ['read an array'] = function (test) {
   reader.pipe(writer)
 }
 
+exports ['read an array - async'] = function (test) {
+
+  var readThis = u.map(3, 6, 100, u.id) //array of multiples of 3 < 100
+
+  var reader = 
+    es.readable(function (i, callback) {
+      if(i >= readThis.length)
+        return this.emit('end')
+      u.delay(callback)(null, readThis[i])
+    })
+
+  var writer = es.writeArray(function (err, array){
+    if(err) throw err
+    it(array).deepEqual(readThis)
+    test.done()
+  })
+
+  reader.pipe(writer)
+}
+
+
 exports ['emit data then call next() also works'] = function (test) {
 
-  var readThis = d.map(3, 6, 100, d.id) //array of multiples of 3 < 100
+  var readThis = u.map(3, 6, 100, u.id) //array of multiples of 3 < 100
 
   var reader = 
     es.readable(function (i, next) {
@@ -59,12 +80,37 @@ exports ['callback emits error, then stops'] = function (test) {
 
   reader.on('error', function (_err){
     it(_err).deepEqual(err)
-    d.delay(function() {
+    u.delay(function() {
       it(called).equal(1)
       test.done()
-    },50)()
+    }, 50)()
   })
 }
+
+exports['readable does not call read concurrently'] = function (test) {
+
+  var current = 0
+  var source = es.readable(function(count, cb){
+    current ++
+    if(count > 100)
+      return this.emit('end')
+    u.delay(function(){
+      current --
+      it(current).equal(0)      
+      cb(null, {ok: true, n: count});
+    })();
+  });
+
+  var destination = es.map(function(data, cb){
+    //console.info(data); 
+    cb();
+  });
+
+  var all = es.connect(source, destination);
+
+  destination.on('end', test.done)
+}
+
 
 //
 // emitting multiple errors is not supported by stream.

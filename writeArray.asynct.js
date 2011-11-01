@@ -1,8 +1,7 @@
 
 var es = require('event-stream')
   , it = require('it-is').style('colour')
-  , d = require('d-utils')
-
+  , d = require('ubelt')
 
 exports ['write an array'] = function (test) {
 

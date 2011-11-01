@@ -1,0 +1,609 @@
+pre [ 'issue1.js' ]
+POST [ 'issue1.js' ] /home/dominic/source/dev/event-stream_tests
+{ ok: true, n: 0 }
+{ ok: true, n: 2 }
+{ ok: true, n: 4 }
+{ ok: true, n: 6 }
+{ ok: true, n: 8 }
+{ ok: true, n: 10 }
+{ ok: true, n: 12 }
+{ ok: true, n: 14 }
+{ ok: true, n: 16 }
+{ ok: true, n: 18 }
+{ ok: true, n: 20 }
+{ ok: true, n: 22 }
+{ ok: true, n: 24 }
+{ ok: true, n: 26 }
+{ ok: true, n: 28 }
+{ ok: true, n: 30 }
+{ ok: true, n: 32 }
+{ ok: true, n: 34 }
+{ ok: true, n: 36 }
+{ ok: true, n: 38 }
+{ ok: true, n: 40 }
+{ ok: true, n: 42 }
+{ ok: true, n: 44 }
+{ ok: true, n: 46 }
+{ ok: true, n: 48 }
+{ ok: true, n: 50 }
+{ ok: true, n: 52 }
+{ ok: true, n: 54 }
+{ ok: true, n: 56 }
+{ ok: true, n: 58 }
+{ ok: true, n: 60 }
+{ ok: true, n: 62 }
+{ ok: true, n: 64 }
+{ ok: true, n: 66 }
+{ ok: true, n: 68 }
+{ ok: true, n: 70 }
+{ ok: true, n: 72 }
+{ ok: true, n: 74 }
+{ ok: true, n: 76 }
+{ ok: true, n: 78 }
+{ ok: true, n: 80 }
+{ ok: true, n: 82 }
+{ ok: true, n: 84 }
+{ ok: true, n: 86 }
+{ ok: true, n: 88 }
+{ ok: true, n: 90 }
+{ ok: true, n: 92 }
+{ ok: true, n: 94 }
+{ ok: true, n: 96 }
+{ ok: true, n: 98 }
+{ ok: true, n: 100 }
+[31missue1.js[39m
+  [31mreadable does not call read concurrently[39m
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    AssertionError: 0 == 1
+        at applyAssertion (/home/dominic/source/dev/it-is/it-is.js:33:17)
+        at Function.assertion (/home/dominic/source/dev/it-is/it-is.js:64:7)
+        at Function.equal (/home/dominic/source/dev/it-is/it-is.js:83:19)
+        at /home/dominic/source/dev/event-stream_tests/issue1.js:15:19
+        at Timer.callback (/home/dominic/source/dev/ubelt/async.js:11:14)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at error (/usr/local/lib/node_modules/asynct/asynct.js:51:11)
+        at EventEmitter.handle (/usr/local/lib/node_modules/asynct/asynct.js:65:13)
+        at EventEmitter.emit (events.js:81:20)
+    Error: test 'readable does not call read concurrently' called finish twice
+        at Stream.next (/usr/local/lib/node_modules/asynct/asynct.js:44:39)
+        at Stream.emit (events.js:81:20)
+        at Stream.end (/home/dominic/source/dev/event-stream/index.js:173:14)
+        at Stream.onend (stream.js:74:10)
+        at Stream.emit (events.js:81:20)
+        at Stream.<anonymous> (/home/dominic/source/dev/event-stream_tests/issue1.js:12:19)
+        at Array.<anonymous> (/home/dominic/source/dev/event-stream/index.js:93:14)
+        at EventEmitter._tickCallback (node.js:126:26)

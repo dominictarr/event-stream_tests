@@ -1,7 +1,7 @@
 
 var es = require('event-stream')
   , it = require('it-is').style('colour')
-  , d = require('d-utils')
+  , d = require('ubelt')
 
 function readStream(stream, pauseAt, done) {
   if(!done) done = pauseAt, pauseAt = -1

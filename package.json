@@ -5,7 +5,11 @@
 , "repository": 
   { "type": "git"
   , "url": "https://github.com/dominictarr/event-stream_tests/.git" }
-, "dependencies": {}
+, "dependencies": {
+    "ubelt": "~2.9"
+  , "it-is": "1"
+  , "event-stream": "*"
+  }
 , "devDependencies": {}
 , "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://bit.ly/dominictarr)"
 , "scripts": { "test": "meta-test test/*.js" } }

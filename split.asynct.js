@@ -1,6 +1,6 @@
 var es = require('event-stream')
   , it = require('it-is').style('colour')
-  , d = require('d-utils')
+  , d = require('ubelt')
   , join = require('path').join
   , fs = require('fs')
   , Stream = require('stream').Stream
