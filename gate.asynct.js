@@ -1,7 +1,7 @@
 
 var es  = require('event-stream')
   , it  = require('it-is')
-  , d   = require('d-utils')
+  , d   = require('ubelt')
  
 exports ['gate buffers when shut'] = function (test) {
 

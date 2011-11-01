@@ -82,6 +82,7 @@ exports ['read one item per tick'] = function (test) {
     test.done()
   })
   tickMapper.on('drain', function () {
+    console.error('drain!')
     drains ++
   })
 

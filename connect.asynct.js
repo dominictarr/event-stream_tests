@@ -1,6 +1,6 @@
 var es = require('event-stream')
   , it = require('it-is').style('colour')
-  , d = require('d-utils')
+  , d = require('ubelt')
 
 function makeExamplePipe() {
 
